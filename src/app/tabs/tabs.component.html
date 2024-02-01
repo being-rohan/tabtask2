@@ -1,0 +1,21 @@
+<ul class="nav nav-pills">
+    <li class="nav-item" *ngFor="let skill of skillarray" (click)="skillset23(skill.skillName)">
+        <a href="javascript:;" class="nav-link text-capitalize" [ngClass]="{
+            active:skillset2.toLocaleLowerCase().includes(skill.skillName)
+        }">
+              {{skill.skillName}}
+        </a>
+    </li>
+</ul>
+
+
+<div class="tabs-body">
+<ng-container *ngFor="let skill1 of skillarray">
+    <div class="card"*ngIf="skillset2.toLocaleLowerCase().includes(skill1.skillName)">
+        <div class="card-body" [innerHTML]="skill1.content">
+
+        </div>
+    </div>
+
+</ng-container>
+</div>

@@ -1,0 +1,47 @@
+<ul class=" nav nav-pills">
+    <li class="nav-item" (click)="skillset('javascript')">
+        <a href="javascript:;" [ngClass]="{
+            active:selectedskillset.toLocaleLowerCase().includes('javascript')
+        }" class="nav-link active">javascript</a>
+    </li>
+    <li class="nav-item" (click)="skillset('angular')">
+        <a href="javascript:;" [ngClass]="{
+            active:selectedskillset.toLocaleLowerCase().includes('angular')
+        }" class="nav-link">angular</a>
+    </li>
+    <li class="nav-item" (click)="skillset('html')">
+        <a href="javascript:;" [ngClass]="{
+            active:selectedskillset.toLocaleLowerCase().includes('html')
+        }" class="nav-link">html</a>
+    </li>
+
+</ul>
+<div class="tabs-body mt-2">
+    <div class="card mb-2 " *ngIf="selectedskillset.toLocaleLowerCase().includes('javascript')">
+        <div class="card-body">
+            <strong>javascript
+            </strong>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam consequatur suscipit autem et doloribus
+            provident!
+
+        </div>
+    </div>
+    <div class="card mb-2" *ngIf="selectedskillset.toLocaleLowerCase().includes('angular')">
+        <div class="card-body">
+            <strong>angular
+            </strong>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam consequatur suscipit autem et doloribus
+            provident!
+
+        </div>
+    </div>
+    <div class="card mb-2" *ngIf="selectedskillset.toLocaleLowerCase().includes('html')">
+        <div class="card-body">
+            <strong>html
+            </strong>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam consequatur suscipit autem et doloribus
+            provident!
+
+        </div>
+    </div>
+</div>
